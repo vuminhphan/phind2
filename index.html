@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestBuy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .product {
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 20px;
+        }
+        form h2 {
+            margin-bottom: 10px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BestBuy</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Electronics</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="product-container">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>Product 1 Description</p>
+            <button onclick="alert('Added to cart!')">Add to Cart</button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>Product 2 Description</p>
+            <button onclick="alert('Added to cart!')">Add to Cart</button>
+        </div>
+        <!-- Add more products as needed -->
+    </div>
+    <footer>
+        &copy; 2023 BestBuy. All rights reserved.
+    </footer>
+    <form>
+        <h2>Contact Us</h2>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Your Name">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" placeholder="Your Email">
+        <label for="message">Your Message:</label>
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        // Example JavaScript functionality
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting
+            alert('Form submitted!');
+        });
+    </script>
+</body>
+</html>
